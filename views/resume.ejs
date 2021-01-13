@@ -1,15 +1,99 @@
-<div class="container">
-  <div class="resume">
-    <h1 style="margin-top: 50px; margin-bottom: 25px;">Miles Lowry CV</h1>
-    <h3>Work Experience</h3>
-    <% items.forEach(item => { %>
-    <h4 class="resume-subsection"><%= item.position %>—<%= item.company %></h4>
-    <h6><%= dateformat(item.startDate, "mmmm, yyyy") %> - <%= dateformat(item.endDate, "mmmm, yyyy") %></h6>
-    <ul>
-      <% item.bullets.forEach(bullet => { %>
-      <li><%= bullet %></li>
-      <% }); %>
-    </ul>
-    <% }); %>
+<div class="container" style="margin-bottom:25px;">
+  <div style="margin-top: 100px; margin-bottom: 25px;">
+    <h1>Miles Lowry Resume</h1>
+    <a href="/docs/resume.pdf">Download PDF</a>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h2>Work Experience</h2>
+    </div>
+    <div class="card-body">
+      <h4>Web Developer — ELITechGroup, Inc.</h4>
+      <h6>Oct 2020 – Dec 2020</h6>
+      <ul>
+        <li>
+          Developed a responsive website showing international product registration, licensing, and agreements using JS,
+          SQL Server 2012, and PHP 7.2
+        </li>
+        <li>
+          Worked with team to design an easily scalable database in SQL Server 2012
+        </li>
+        <li>
+          Managed client-side design, code, and execution by leading team meetings each week and acting as an admin for
+          the GitHub repository
+        </li>
+        <li>
+          Designed and developed 85% of the web pages and JS functionality
+        </li>
+        <li>
+          <a href="http://www.elitechgroupinc.com/">Visit Website</a>
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>Web Developer — Amano</h4>
+      <h6>Oct 2020 – Dec 2020</h6>
+      <ul>
+        <li>
+          Transformed client vision of a dashboard for managing pools into a proof-of-concept Node.js application using
+          REST API architecture
+        </li>
+        <li>
+          Designed and built a MongoDB database
+        </li>
+        <li>
+          Created a dashboard to display current pool levels, historical data, and alerts and recommendations about
+          managed pools using Node.js and MongoDB
+        </li>
+        <li>
+          <a href="https://www.amanodashboard.herokuapp.com">Visit Site</a>
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>Data Analyst — BYU-Idaho Student Support </h4>
+      <h6>Jan 2017 – Apr 2019</h6>
+      <ul>
+        <li>
+          Pitched and created a data analytics program from the ground up to help the department track and achieve its
+          student retention goals using Qualtrics, Excel, SPSS, and R
+        </li>
+        <li>
+          Used historical data and R to perform data analytics to identify which candidates were most likely to become
+          volunteers for the department
+        </li>
+        <li>
+          Brought volunteer survey response rates up from 4% to a consistent 20% by creating a series of automated
+          reminders in Qualtrics
+        </li>
+        <li>
+          Developed automated dashboards and reports for an executive vice president using Google Sheets and Excel
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>Research/Teaching Assistant — BYU-Idaho Psychology Department</h4>
+      <h6>Sep 2016 – Jan 2018 </h6>
+      <ul>
+        <li>
+          Taught students effective writing and research principles
+        </li>
+        <li>
+          Provided constructive feedback on coursework to students from three classes
+        </li>
+        <li>
+          Helped students develop critical thinking skills by challenging their assumptions on writing assignments.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br />
+  <div class="card">
+    <div class="card-body">
+
+    </div>
   </div>
 </div>
