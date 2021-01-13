@@ -106,6 +106,7 @@ a {
 .footer-bar {
   background: black;
   position: fixed;
+  left: 0;
   border-top-style: solid;
   border-color: #ffc107;
   border-width: 2px;
