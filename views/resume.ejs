@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="resume">
+    <h1 style="margin-top: 50px; margin-bottom: 25px;">Miles Lowry CV</h1>
+    <h3>Work Experience</h3>
+    <% items.forEach(item => { %>
+    <h4 class="resume-subsection"><%= item.position %>—<%= item.company %></h4>
+    <h6><%= dateformat(item.startDate, "mmmm, yyyy") %> - <%= dateformat(item.endDate, "mmmm, yyyy") %></h6>
+    <ul>
+      <% item.bullets.forEach(bullet => { %>
+      <li><%= bullet %></li>
+      <% }); %>
+    </ul>
+    <% }); %>
+  </div>
+</div>

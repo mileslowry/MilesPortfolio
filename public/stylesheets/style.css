@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Gatsby';
+  src: url('/fonts/decotech/DecoTech.ttf')
+}
+
+body {
+  font-family: 'Karla';
+  margin:0;
+}
+
+h1 {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar {
+  z-index:1;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: black;
+  /* background: #0a1438; */
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #ffc107;
+}
+
+.nav-link,
+.navbar-brand {
+  font-size: 20px;
+  color:white;
+  cursor: pointer;
+}
+
+.nav-link {
+  margin-right: 1em !important;
+}
+
+.navbar-brand {
+  padding: 8px;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  font-family: 'Karla';
+  font-weight: bold;
+  color: #cdffee;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-toggler {
+  background: #fff !important;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.main {
+  z-index:2;
+  padding: 30px;;
+}
+
+.resume-subsection {
+  margin-top: 25px;
+}
+
+.bg-inky {
+  background-color: #0a1438;
+}
+
+.bg-dark {
+  background-color: #343a40 !important
+}
+
+.bg-primary {
+  background-color: #007bff !important
+}
+
+.header {
+  /* background: rgb(119,180,142);
+  background: linear-gradient(16deg, rgba(119,180,142,1) 0%, rgba(151,221,255,1) 100%, rgba(9,73,121,1) 100%); */
+  background: white;
+}
+
+.description{
+  position: absolute;
+  top: 15%;
+  margin: auto;
+  padding: 2em;
+  
+}
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer-bar {
+  background: black;
+  position: fixed;
+  border-top-style: solid;
+  border-color: #ffc107;
+  border-width: 2px;
+  width:100%;
+  height: 2.5rem; 
+  bottom: 0%;
+}
+/* 
+.resume {
+  position: absolute;
+  top: 5%;
+  margin: auto;
+  padding: 2em;
+  
+} */
+
+
+/* .nav-link {
+  font-size: large;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(40, 45, 119);
+  color: white;
+} */
