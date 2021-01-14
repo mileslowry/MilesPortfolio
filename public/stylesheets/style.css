@@ -25,6 +25,13 @@ a {
   color: #00B7FF;
 }
 
+.avatar {
+  border-radius: 50%;
+  border-style: solid;
+  border-color:#ffc107;
+  border-width: 2px;
+}
+
 .navbar {
   z-index:1;
   overflow: hidden;

@@ -10,7 +10,8 @@ const createError = require('http-errors'),
   logger = require('morgan');
 
 mongoose.connect(
-  process.env.MONGODB_URI,
+  "mongodb+srv://mileslowry:testpassword@ml-cluster1.hks6n.mongodb.net/resume_db?retryWrites=true&w=majority",
+  // process.env.MONGODB_URI,
   { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true }
 );
 
