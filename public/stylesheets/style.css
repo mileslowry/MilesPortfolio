@@ -3,6 +3,14 @@
   src: url('/fonts/decotech/DecoTech.ttf')
 }
 
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
 body {
   font-family: 'Karla';
   margin:0;

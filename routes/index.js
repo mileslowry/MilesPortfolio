@@ -1,12 +1,14 @@
 const router = require('express').Router(),
+  contactRoutes = require('./contactRoutes'),
   resumeRoutes = require('./resumeRoutes'),
-  workRoutes = require('./workRoutes'),
+  portfolioRoutes = require('./portfolioRoutes'),
   blogRoutes = require('./blogRoutes'),
   homeRoutes = require('./homeRoutes');
 
-router.get('/work', workRoutes);
+router.get('/portfolio', portfolioRoutes);
 router.get('/blog', blogRoutes);
 router.get('/resume', resumeRoutes);
+router.get('/contact', contactRoutes);
 router.get('/', homeRoutes);
 
 module.exports = router;
