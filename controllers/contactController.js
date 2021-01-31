@@ -13,7 +13,7 @@ module.exports = {
         res.render('thanks');
     },
 
-    sendMessage: (req, res) => {
+    sendMessage: (req, res, next) => {
         let messageParams = {
             name: req.body.name,
             email: req.body.email,
@@ -32,5 +32,11 @@ module.exports = {
                 console.log(`Error sending message: ${error.message}`);
                 next(error);
             })
+    },
+
+    redirectView: (req, res, next) => {
+        let redirectPath = res.locals.redirect;
+        if (redirectPath) res.redirect(redirectPath);
+        else next();
     }
 }

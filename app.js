@@ -3,15 +3,18 @@ const createError = require('http-errors'),
   express = require('express'),
   path = require('path'),
   mongoose = require('mongoose'),
+  mongoMorgan = require('mongoose-morgan'),
   layouts = require('express-ejs-layouts'),
   cookieParser = require('cookie-parser'),
+  session = require('express-session'),
   methodOverride = require("method-override"),
-  Routes = require('./routes/index'),
+  Router = require('./routes/index'),
   logger = require('morgan');
 
+require('dotenv').config();
+
 mongoose.connect(
-  "mongodb+srv://mileslowry:testpassword@ml-cluster1.hks6n.mongodb.net/resume_db?retryWrites=true&w=majority",
-  // process.env.MONGODB_URI,
+  process.env.MONGODB_URI_DEV,
   { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true }
 );
 
@@ -27,11 +30,22 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(layouts);
-
-app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(session({resave: true, saveUninitialized:true, secret: process.env.SECRET, cookie: {maxAge: 1000 * 60 * 60 * 24 * 14}}));
+app.use(mongoMorgan(
+  {
+    collection: 'log',
+    connectionString: process.env.MONGODB_URI_DEV,
+  }, 
+  {
+    skip: function (req, res) {
+    return res.statusCode < 400 || res.statusCode === 304;
+    }
+  },
+  ':method :url :status'
+));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
@@ -40,7 +54,7 @@ app.use(
   })
 );
 
-app.use('/', Routes);
+app.use('/', Router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

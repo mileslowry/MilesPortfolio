@@ -1,6 +1,6 @@
 const router = require('express').Router(),
   blogController = require('../controllers/blogController');
 
-router.get('/blog', blogController.indexView);
+router.get('/', blogController.indexView);
 
 module.exports = router;
