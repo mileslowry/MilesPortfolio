@@ -1,5 +1,5 @@
 module.exports = {
-    indexView: (req, res) => {
+    portfolio: (req, res) => {
         res.render("portfolio");
     }
 };

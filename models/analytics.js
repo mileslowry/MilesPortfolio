@@ -3,10 +3,10 @@
 const mongoose = require("mongoose");
 
 const analyticSchema = new mongoose.Schema({
-    userId: String,
     sessionId: String,
     method: String,
     path: String,
+    goTo: String,
     dateTime: {
         type: Date,
         default: new Date(),
