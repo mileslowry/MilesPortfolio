@@ -59,11 +59,9 @@ app.use(
 
 app.use(async (req, res, next) => {
   let ip = req.ip;
-  console.log(ip);
   let resp = await axios.get(`http://api.ipstack.com/${ip}?access_key=${process.env.IPSTACK}`);
   let currentLocation = resp.data;
   res.locals.location = currentLocation;
-  console.log(currentLocation);
   next();
 })
 
