@@ -25,13 +25,6 @@ db.once("open", () => {
   console.log("Successfully connected to MongoDB using Mongoose!");
 });
 
-const getLocation = async () => {
-  let resp = await axios.get(`http://api.ipstack.com/check?access_key=${process.env.IPSTACK}`);
-  let location = resp.data;
-  return location;
-}
-const location = getLocation();
-
 const app = express();
 
 // view engine setup
@@ -56,6 +49,8 @@ app.use(mongoMorgan(
 ));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.set('trust proxy', true);
+
 app.use(
   methodOverride("_method", {
     methods: ["POST", "GET"]
@@ -63,7 +58,10 @@ app.use(
 );
 
 app.use(async (req, res, next) => {
-  let currentLocation = await location;
+  let ip = req.ip;
+  console.log(ip);
+  let resp = await axios.get(`http://api.ipstack.com/${ip}?access_key=${process.env.IPSTACK}`);
+  let currentLocation = resp.data;
   res.locals.location = currentLocation;
   console.log(currentLocation);
   next();
