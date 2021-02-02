@@ -9,6 +9,7 @@ const createError = require('http-errors'),
   session = require('express-session'),
   methodOverride = require("method-override"),
   Router = require('./routes/index'),
+  axios = require('axios'),
   logger = require('morgan');
 
 require('dotenv').config();
@@ -23,6 +24,13 @@ const db = mongoose.connection;
 db.once("open", () => {
   console.log("Successfully connected to MongoDB using Mongoose!");
 });
+
+const getLocation = async () => {
+  let resp = await axios.get(`http://api.ipstack.com/check?access_key=${process.env.IPSTACK}`);
+  let location = resp.data;
+  return location;
+}
+const location = getLocation();
 
 const app = express();
 
@@ -54,10 +62,17 @@ app.use(
   })
 );
 
+app.use(async (req, res, next) => {
+  let currentLocation = await location;
+  res.locals.location = currentLocation;
+  console.log(currentLocation);
+  next();
+})
+
 app.use('/', Router);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function(req, res, next) { 
   next(createError(404));
 });
 
@@ -70,6 +85,8 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+
+  console.log(err.message)
 });
 
 module.exports = app;

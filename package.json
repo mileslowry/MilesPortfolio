@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bcrypt-nodejs": "0.0.3",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
