@@ -15,7 +15,7 @@ const createError = require('http-errors'),
 require('dotenv').config();
 
 mongoose.connect(
-  process.env.MONGODB_URI_DEV,
+  process.env.MONGODB_URI,
   { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true }
 );
 
@@ -38,7 +38,7 @@ app.use(session({resave: true, saveUninitialized:true, secret: process.env.SECRE
 app.use(mongoMorgan(
   {
     collection: 'log',
-    connectionString: process.env.MONGODB_URI_DEV,
+    connectionString: process.env.MONGODB_URI,
   }, 
   {
     skip: function (req, res) {
