@@ -4,23 +4,119 @@
             <h1>Portfolio</h1>
         </div>
         <div class="card-body">
-
-            <a href="http://amanodashboard.herokuapp.com/">Amano Dashboard</a>
-
-            <p>
-                A Node.js application that displays current pool levels, historical data, alerts,
-                and recommendations about managed pools. Uses MongoDB, Express, and EJS.
-            </p>
-
-            <!-- <a href="http://www.elitechgroupinc.com/">ELITechGroup, Inc.</a>
-
-            <p>
-                A responsive PHP website showing international product registration, licensing,
-                and agreements using JS, and Microsoft SQL Server 2012.
-            </p> -->
-            </ul>
-        </div>
-
-    </div>
-
-</div>
+                      <br />
+                      <div>
+                        <h2><a href="http://amanodashboard.herokuapp.com/">Amano Pool Dashboard</a></h2><br />
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block w-100" src="/images/amano1.png" alt="All pools" style="height:400px; object-fit: contain;">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="/images/amano3.png" alt="Gauge charts" style="height:400px; object-fit: contain;">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="/images/amano4.png" alt="Admin tickets" style="height:400px; object-fit: contain;">
+                              </div>
+                            </div>
+                        </div>
+                        <p>
+                        <h5>The Problem </h5>Pool technicians spend a lot of time checking pool levels,
+                        which takes time away from finding and helping new clients.</p>
+                        <hr />
+            
+                        <p>
+                        <h5>The Solution: </h5>The Amano founders engineered a really neat solution:
+                        small devices that float unobtrusively in pools and periodically collect data on pool pH, alkalinity, and
+                        Chlorine levels. </p>
+                        <hr />
+            
+                        <p>
+                        <h5>So, where do I come in?</h5> I built a Node.js (Express and EJS) application that displays current pool
+                        levels, historical data,
+                        alerts, and recommendations. With attractive data visualization and intuitive UI/UX, the web app enables
+                        pool technicians
+                        to know what needs done at a glance. Visit the website <a href="http://amanodashboard.herokuapp.com/">here</a>.
+                        You can test the site by registering and then logging in. This version of the site is not connected to 
+                        anything sensitive.</p><br />
+                        
+                      </div>
+                      <div>
+                        <a href="/portfolio/elitech">
+                          <h2>ELITechGroup, Inc.</h2><br />
+                        </a>
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="/images/elitech_main.png" alt="Report 1" style="height:400px; object-fit: contain;">
+                                </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="/images/R1_blank.jpeg" alt="Report 1" style="height:400px; object-fit: contain;">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="/images/R2.jpeg" alt="Report 2" style="height:400px; object-fit: contain;">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="/images/R3_Canada.jpeg" alt="Report 3" style="height:400px; object-fit: contain;">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="/images/R4_Checked.jpeg" alt="Report 3" style="height:400px; object-fit: contain;">
+                              </div>
+                            </div>
+                        </div><br />
+                        <p>
+                        <h5>The Problem </h5>ELITechGroup, Inc. kept its registration, product, and icensing information on paper,
+                        which made it difficult to find specific data at any given moment.</p>
+                        <hr />
+            
+                        <p>
+                        <h5>The Solution </h5>ELITechGroup decided to digitize its paper forms and make a web application
+                        with several autopopulating reports, making it easy to find relevant information. </p>
+                        <hr />
+            
+                        <p>
+                        <h5>So, where do I come in?</h5> I worked with a team to build out the client-side of the application.
+                        Using JS (supported heavily by jQuery), we built out a series of reports that take parameters
+                        through dropdowns and checkboxes, request data from a PHP API, and return neatly formatted, printable data
+                        tables.
+                        I designed and developed 85% of the web pages and JS functionality. Read more about it <a
+                          href="/portfolio/elitech">here</a>.</p><br />
+            
+                      </div>
+                      <div>
+                        <a href="/portfolio/camera" class="warning">
+                          <h3>Camera Shopping (in development)</h3>
+                        </a>
+            
+                        <p>
+                        <h5>The Problem </h5>Getting into photography is daunting: there's so much equipment, all of it costly,
+                        that it can become overwhelming to figure out where to begin.</p>
+                        <hr />
+            
+                        <p>
+                        <h5>The Solution </h5>I decided to build the app that would have saved me hundreds of hours when I was
+                        getting
+                        into photography: a recommendation system that guides users through the most important questions,
+                        then returns some great options (complete with clear explanations of why it's recommending each camera).
+                        </p>
+                        <hr />
+            
+                        <p>
+                        <h5>Progress</h5> I have collected about 50 points of data each for nearly 2500 cameras. I scraped the data
+                        from a variety
+                        of sources on the web using the BeautifulSoup library in Python and am processing the data using the Pandas
+                        library. The client
+                        side is essentially complete, as is the data modelling for MongoDB.
+                        <br /><br />
+                        The data can currently be accessed in JSON format from the homepage.
+                        Once the data is fully processed and tagged, I will train an ensemble of supervised machine learning models
+                        to make excellent recommendations in real time
+                        (recommendations will update for each question answered so that users can focus on what's most important to
+                        them).
+                        A limited beta version of the website will be available 2/10/2021.
+                        Read more <a href="/portfolio/camera">here</a>.</p><br />
+            
+                      </div>
+                    </div>
+                  </div>
+              </div>

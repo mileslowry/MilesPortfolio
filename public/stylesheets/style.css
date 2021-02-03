@@ -22,7 +22,19 @@ h1 {
 }
 
 a {
-  color: #00B7FF;
+  color: #477c62;
+}
+
+a:hover {
+  color: #14241c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-hr {
+  height: 2px;
+  border: none;
+  background-color: black;
 }
 
 .avatar {
