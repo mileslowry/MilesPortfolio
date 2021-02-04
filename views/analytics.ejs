@@ -1,0 +1,43 @@
+<div class="container">
+    <div>
+        <h2>Visits by IP Address Location</h2>
+        <ul>
+            <% for (city in cities) { %>
+                    <li><%= city === 'null' ? "Unknown" : city %>: <%= cities[city] %> </li> 
+            <% }; %>
+        </ul>
+    </div>
+    <div>
+        <h2>Visits by Date</h2>
+        <ul>
+            <% for (date in dates) { %>
+                    <li><%= date %>: <%= dates[date] %> </li> 
+            <% }; %>
+        </ul>
+    </div><hr />
+    <div>
+        <h2>Session Data</h2><br />
+            <% for (session in sessions) { %>
+                <h4><%= typeof sessions[session][0].city === 'object' ? "Unknown City" :  sessions[session][0].city %> (<%= dateFormat(sessions[session][0].dateTime, "mediumDate") %>) </h4>
+                <table class='table table-bordered table-hover'>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Method</th>
+                            <th>Path</th>
+                            <th>Page</th>
+                        </tr>
+                    </thead>
+                    <% sessions[session].forEach(request => { %>
+                        <tr>
+                            <td><%= dateFormat(request.dateTime, "h:MM:ss TT") %></td>
+                            <td><%= request.method %></td>
+                            <td><%= request.path %></td>
+                            <td><%= request.goTo %></td>
+                        </tr>
+                    <% }) %>
+                </table><br /><br />
+            <% }; %>
+
+    </div>
+</div>

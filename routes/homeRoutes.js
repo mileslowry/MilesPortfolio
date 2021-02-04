@@ -7,6 +7,7 @@ router.get('/', appController.userAnalytics, homeController.landingPage);
 router.get('/li', appController.userAnalytics, homeController.landingPage);
 router.get('/in', appController.userAnalytics, homeController.landingPage);
 router.get('/re', appController.userAnalytics, homeController.landingPage);
+router.get('/analytics', appController.analyticsView);
 
 
 module.exports = router;

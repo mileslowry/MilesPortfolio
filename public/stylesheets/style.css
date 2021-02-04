@@ -156,6 +156,16 @@ a:hover {
   height: 2.5rem; 
   bottom: 0%;
 }
+
+#map {
+  height: 400px;
+  width: 100%
+}
+
+thead {
+  background-color: #61796d;
+  color: white;
+}
 /* 
 .resume {
   position: absolute;
