@@ -6,7 +6,8 @@
         <img class="avatar" src="/images/miles_headshot.jpg" style="width: 200px;">
       </div>
       <h1 class="card-title">Miles Lowry, Web Developer</h1>
-      <p>I'm a backend web developer in the San Francisco area looking for fulltime work.</p>
+      <p>I'm a backend web developer with unbridled enthusiasm for providing solutions through technology and
+        information.</p>
       <a href="/resume" class="btn btn-warning btn-lg">Resume</a>
       <a href="/portfolio" class="btn btn-warning btn-lg">Portfolio</a>
     </div>
@@ -15,11 +16,10 @@
   <br />
   <br />
   <div class="row">
-
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <div class="card mb-3" style="height:100%;">
-        <div class="card-header">
-          <h2>Portfolio</h2>
+        <div class="card-header text-center" style="background-color: #dde6e2;">
+          <h2>My Projects</h2>
         </div>
         <div class="card-body">
           <br />
@@ -27,106 +27,142 @@
             <a href="/portfolio#amano">
               <h3>Amano Pool Dashboard</h3>
             </a>
-
+            <div class="text-center">
+              <img src="/images/amano3.png" alt="pool level gauges">
+              <p><small><i>Technicians can see pool levels at a glance using these echarts gauges.</i></small></p>
+            </div>
             <p>
-            <h5>The Problem </h5>Pool technicians spend a lot of time checking pool levels,
-            which takes time away from finding and helping new clients.</p>
+              <h5>The Problem </h5>Pool technicians spend a lot of time checking pool levels,
+              which takes time away from finding and helping new clients.
+            </p>
             <hr />
 
             <p>
-            <h5>The Solution: </h5>The Amano founders engineered a really neat solution:
-            small devices that float unobtrusively in pools and periodically collect data on pool pH, alkalinity, and
-            Chlorine levels. </p>
+              <h5>The Solution: </h5>The Amano founders engineered a really neat solution:
+              small devices that float unobtrusively in pools and periodically collect data on pool pH, alkalinity, and
+              Chlorine levels.
+            </p>
             <hr />
 
             <p>
-            <h5>So, where do I come in?</h5> I built a Node.js (Express and EJS) application that displays current pool
-            levels, historical data,
-            alerts, and recommendations. With attractive data visualization and intuitive UI/UX, the web app enables
-            pool technicians
-            to know what needs done at a glance. Read more about it <a href="/portfolio#amano">here</a>.</p><br />
+              <h5>So, where do I come in?</h5> I built a Node.js (Express and EJS) application that displays current
+              pool
+              levels, historical data,
+              alerts, and recommendations. With attractive data visualization and intuitive UI/UX, the web app enables
+              pool technicians
+              to know what needs done at a glance. Read more about it <a href="/portfolio#amano">here</a>.
+            </p><br />
 
           </div>
           <div>
             <a href="/portfolio#elitech">
               <h3>ELITechGroup, Inc.</h3>
             </a>
-
+            <div class="text-center">
+              <img src="/images/R3_Canada.jpeg" alt="canadian authorized to sell report">
+              <p><small><i>Fields will autopopulate with data for the selected country.</i></small></p>
+            </div>
             <p>
-            <h5>The Problem </h5>ELITechGroup, Inc. kept its registration, product, and icensing information on paper,
-            which made it difficult to find specific data at any given moment.</p>
+              <h5>The Problem </h5>ELITechGroup, Inc. kept its registration, product, and icensing information on paper,
+              which made it difficult to find specific data at any given moment.
+            </p>
             <hr />
 
             <p>
-            <h5>The Solution </h5>ELITechGroup decided to digitize its paper forms and make a web application
-            with several autopopulating reports, making it easy to find relevant information. </p>
+              <h5>The Solution </h5>ELITechGroup decided to digitize its paper forms and make a web application
+              with several autopopulating reports, making it easy to find relevant information.
+            </p>
             <hr />
 
             <p>
-            <h5>So, where do I come in?</h5> I worked with a team to build out the client-side of the application.
-            Using JS (supported heavily by jQuery), we built out a series of reports that take parameters
-            through dropdowns and checkboxes, request data from a PHP API, and return neatly formatted, printable data
-            tables.
-            I designed and developed 85% of the web pages and JS functionality. Read more about it <a
-              href="/portfolio#elitech">here</a>.</p><br />
+              <h5>So, where do I come in?</h5> I worked with a team to build out the client-side of the application.
+              Using JS (supported heavily by jQuery), we built out a series of reports that take parameters
+              through dropdowns and checkboxes, request data from a PHP API, and return neatly formatted, printable data
+              tables.
+              I designed and developed 85% of the web pages and JS functionality. Read more about it <a
+                href="/portfolio#elitech">here</a>.
+            </p><br />
 
           </div>
           <div>
             <a href="/portfolio#camera">
               <h3>Camera Shopping (in development)</h3>
             </a>
-
+            <div class="text-center">
+              <img src="/images/camera1.JPG" alt="camera site">
+              <p><small><i>Users answer questions on the left and get live recommendations on the right.</i></small></p>
+            </div>
             <p>
-            <h5>The Problem </h5>Getting into photography is daunting: there's so much equipment, all of it costly,
-            that it can become overwhelming to figure out where to begin.</p>
-            <hr />
-
-            <p>
-            <h5>The Solution </h5>I decided to build the app that would have saved me hundreds of hours when I was
-            getting
-            into photography: a recommendation system that guides users through the most important questions,
-            then returns some great options (complete with clear explanations of why it's recommending each camera).
+              <h5>The Problem </h5>Getting into photography is daunting: there's so much equipment, all of it costly,
+              that it can become overwhelming to figure out where to begin.
             </p>
             <hr />
 
             <p>
-            <h5>Progress</h5> I have collected about 50 points of data each for nearly 2500 cameras. I scraped the data
-            from a variety
-            of sources on the web using the BeautifulSoup library in Python and am processing the data using the Pandas
-            library. The client
-            side is essentially complete, as is the data modelling for MongoDB.
-            <br /><br />
-            The data can currently be accessed in JSON format from the homepage.
-            Once the data is fully processed and tagged, I will train an ensemble of supervised machine learning models
-            to make excellent recommendations in real time
-            (recommendations will update for each question answered so that users can focus on what's most important to
-            them).
-            A limited beta version of the website will be available 2/10/2021.
-            Read more <a href="/portfolio#camera">here</a>.</p><br />
+              <h5>The Solution </h5>I decided to build the app that would have saved me hundreds of hours when I was
+              getting
+              into photography: a recommendation system that guides users through the most important questions,
+              then returns some great options (complete with clear explanations of why it's recommending each camera).
+            </p>
+            <hr />
 
+            <p>
+              <h5>Progress</h5> I have collected about 50 points of data each for nearly 2500 cameras. I scraped the
+              data
+              from a variety
+              of sources on the web using the BeautifulSoup library in Python and am processing the data using the
+              Pandas
+              library. The client
+              side is essentially complete, as is the data modelling for MongoDB.
+              <br /><br />
+              The data can currently be accessed in JSON format from the homepage.
+              Once the data is fully processed and tagged, I will train an ensemble of supervised machine learning
+              models
+              to make excellent recommendations in real time
+              (recommendations will update for each question answered so that users can focus on what's most important
+              to
+              them).
+              A limited beta version of the website will be available 2/10/2021.
+              Read more <a href="/portfolio#camera">here</a>.
+            </p><br />
           </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-5">
       <div class="card mb-3" style="height:100%;">
-        <div class="card-header">
-          <h2>Bio</h2>
+        <div class="card-header text-center" style="background-color: #dde6e2;">
+          <h2>About Me</h2>
         </div>
         <div class="card-body">
           <h5>Professional</h5>
           <p class="card-text">I'm an idea person. I'm all about solutions and take pride in the quality of my work.
-            Even more than ideas, I love the feeling of ideas becoming real, useful products. My work speaks for itself,
-            and I hope you'll enjoy looking through some of my projects.</p>
+            Even more than ideas, I love the feeling of ideas becoming real, useful products. I hope you'll enjoy looking through some of my projects.</p>
           <h5>Personal</h5>
           <p class="card-text">I'm originally from Rexburg, Idaho, where I met my wife, a talented TESL teacher. We have
             one adorable two-year old son who keeps our lives exciting. We like playing games and dreaming of the next
             time we can go to Disneyland.
-          </p><br />
+          </p>
+          <h5>Philosophy</h5>
+          <ul>
+            <li>
+              Good questions are essential to good work
+            </li><br />
+            <li>
+              Ingenuity is usually the result of curiosity + grit
+            </li><br />
+            <li>
+              Only a Sith deals in absolutes
+            </li><br />
+            <li>
+              One does <del>not</del> simply walk into Mordor
+            </li><br />
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  <br />
-  <br />
+</div>
+<br />
+<br />
 </div>

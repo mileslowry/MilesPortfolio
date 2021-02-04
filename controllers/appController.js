@@ -17,8 +17,6 @@ module.exports = {
             longitude: res.locals.location.longitude,
             ip: res.locals.location.ip
         }
-        console.log(line);
-        // console.log(line);
         Analytics.create(line)
             .then(next())
             .catch(error => {

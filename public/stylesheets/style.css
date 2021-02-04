@@ -166,6 +166,13 @@ thead {
   background-color: #61796d;
   color: white;
 }
+
+.card-body img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
 /* 
 .resume {
   position: absolute;
